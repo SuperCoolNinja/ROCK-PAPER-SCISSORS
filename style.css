@@ -43,7 +43,7 @@ body {
   font-size: 3rem;
   color: rgba(255, 255, 255, 0.5);
 }
-#make-your-move {
+#make_your_move {
   text-align: center;
   font-size: 3rem;
   color: rgba(255, 255, 255, 0.5);
@@ -75,6 +75,7 @@ body {
 
 .item {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 30rem;
@@ -82,6 +83,18 @@ body {
   background: #2c2c54;
   border-radius: 2rem;
   margin-top: 3rem;
+  gap: 5rem;
+}
+.label_pi {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#label_p {
+  color: #ffd900bb;
+}
+#label_ia {
+  color: rgba(255, 0, 0, 0.7);
 }
 
 .container-moves {
@@ -101,9 +114,31 @@ body {
   border-radius: 50rem;
   transition: transform 0.3s ease-in-out;
 }
-.move:hover {
+.move:hover,
+.move:focus {
   border: 0.1rem solid rgba(255, 255, 255, 0.25);
   background: #29294996;
   transform: scale(1.05);
   cursor: pointer;
+}
+
+/*image players / Ai*/
+#player_move,
+#ai_move {
+  width: 30rem;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/*Animation when the game begin*/
+@keyframes slide {
+  from {
+    position: relative;
+    top: 0;
+  }
+
+  to {
+    position: relative;
+    top: 15rem;
+  }
 }

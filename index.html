@@ -20,12 +20,14 @@
         <div class="wrapper-item">
           <div class="item">
             <img
+              name="unknown"
               id="player_move"
               src="./assets/unknown.svg"
               alt="player_move"
             />
+            <p class="label_pi" id="label_p">You</p>
           </div>
-          <p class="score">0</p>
+          <p id="score_player" class="score">0</p>
         </div>
 
         <h3 id="vs">Vs</h3>
@@ -34,25 +36,26 @@
         <div class="wrapper-item">
           <div class="item">
             <img id="ai_move" src="./assets/unknown.svg" alt="ai_move" />
+            <p class="label_pi" id="label_ia">AI</p>
           </div>
-          <p class="score">0</p>
+          <p id="score_ai" class="score">0</p>
         </div>
       </div>
 
-      <h6 id="make-your-move">Make your move</h6>
+      <h6 id="make_your_move">Make your move</h6>
 
       <!-- List of moves -->
       <ul class="container-moves">
-        <li class="move">
-          <img id="paper" src="./assets/paper.svg" alt="paper" />
+        <li class="move" id="paper">
+          <img src="./assets/paper.svg" alt="paper" />
         </li>
 
-        <li class="move">
-          <img id="scissors" src="./assets/scissors.svg" alt="scissors" />
+        <li class="move" id="scissors">
+          <img src="./assets/scissors.svg" alt="scissors" />
         </li>
 
-        <li class="move">
-          <img id="rock" src="./assets/rock.svg" alt="rock" />
+        <li class="move" id="rock">
+          <img src="./assets/rock.svg" alt="rock" />
         </li>
       </ul>
     </div>
