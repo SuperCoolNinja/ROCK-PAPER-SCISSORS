@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./main.js"></script>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <!-- Center with margin auto -->
+    <div class="container">
+      <!-- Title  -->
+      <h1 id="title">Rock Paper Scissors</h1>
+
+      <!-- Container wich will contain the Player move vs Ai Move -->
+      <div class="container-players-ai-moves">
+        <!-- Player Move -->
+        <div class="wrapper-item">
+          <div class="item">
+            <img
+              id="player_move"
+              src="./assets/unknown.svg"
+              alt="player_move"
+            />
+          </div>
+          <p class="score">0</p>
+        </div>
+
+        <h3 id="vs">Vs</h3>
+
+        <!-- AI Move -->
+        <div class="wrapper-item">
+          <div class="item">
+            <img id="ai_move" src="./assets/unknown.svg" alt="ai_move" />
+          </div>
+          <p class="score">0</p>
+        </div>
+      </div>
+
+      <h6 id="make-your-move">Make your move</h6>
+
+      <!-- List of moves -->
+      <ul class="container-moves">
+        <li class="move">
+          <img id="paper" src="./assets/paper.svg" alt="paper" />
+        </li>
+
+        <li class="move">
+          <img id="scissors" src="./assets/scissors.svg" alt="scissors" />
+        </li>
+
+        <li class="move">
+          <img id="rock" src="./assets/rock.svg" alt="rock" />
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
