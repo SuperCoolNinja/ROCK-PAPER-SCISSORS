@@ -23,9 +23,9 @@
 
     const AI_MOVES = ["paper", "rock", "scissors"];
     const ENUM_MOVES = {
-      PAPER: 0,
-      ROCK: 1,
-      SCISSORS: 2,
+      PAPER: 'paper',
+      ROCK: "rock",
+      SCISSORS: "scissors",
     };
     const movesFound = [];
 
@@ -61,9 +61,27 @@
           wrapper_item.style.animation = "slide 0.3s forwards ease-in-out";
           elem.style.display = "none";
           player.src = `./assets/${this.id}.svg`;
+
+
+          const doesPlayerWon = checkWinner();
+          console.log(doesPlayerWon);
         }
       });
     });
+
+
+    const checkWinner = () => 
+    {
+        if(player.name === ai.name)
+            return "TIE";
+        else if(player.name === ENUM_MOVES.PAPER && ai.name === ENUM_MOVES.ROCK)
+            return "You Won !";
+        else if(player.name === ENUM_MOVES.ROCK && ai.name === ENUM_MOVES.SCISSORS)
+            return "You Won";
+        else if(player.name === ENUM_MOVES.SCISSORS && ai.name === ENUM_MOVES.PAPER)
+            return "You Won";
+        else return "You Lose !";
+    }
 
     const getRandomMove = (min, max) => {
       min = Math.ceil(min);
@@ -79,6 +97,7 @@
       const LoadRandomIMGIA = () => {
         const randomMove = getRandomMove(0, 3);
         ai.src = `./assets/${AI_MOVES[randomMove]}.svg`;
+        ai.name = AI_MOVES[randomMove];
       };
 
       const interval = setInterval(tick, 1000);
