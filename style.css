@@ -66,11 +66,9 @@ body {
   border-radius: 3rem;
   display: none;
 }
-#container-rematch:hover
-{
+#container-rematch:hover {
   background: #a10606;
-} 
-
+}
 
 .container-players-ai-moves {
   display: flex;
@@ -184,5 +182,47 @@ body {
   to {
     opacity: 1;
     transform: scale(1.2);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #title {
+    font-size: 2.5rem;
+  }
+
+  .label_won {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .item {
+    width: 15rem;
+    height: 15rem;
+    gap: 0;
+  }
+
+  #player_move,
+  #ai_move {
+    width: 20rem;
+    height: 20rem;
+    padding: 1rem;
+  }
+
+  .container-players-ai-moves {
+    justify-content: center;
+  }
+  .wrapper-item {
+    width: 50%;
+  }
+
+  .container-moves {
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  #container-rematch {
+    width: 50%;
+    margin-bottom: 2rem;
   }
 }
