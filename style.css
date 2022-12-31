@@ -35,7 +35,7 @@ body {
 /*Labels :*/
 #title {
   text-align: center;
-  margin: 5rem 0;
+  margin-top: 3rem;
   font-size: 48px;
 }
 #vs {
@@ -54,6 +54,23 @@ body {
   font-size: 2.5rem;
   color: rgba(255, 255, 255, 0.5);
 }
+
+#container-rematch {
+  margin-top: 15rem;
+  width: 10%;
+  height: auto;
+  padding: 2rem;
+  cursor: pointer;
+  background: #e20505b7;
+  text-align: center;
+  border-radius: 3rem;
+  display: none;
+}
+#container-rematch:hover
+{
+  background: #a10606;
+} 
+
 
 .container-players-ai-moves {
   display: flex;
@@ -82,7 +99,6 @@ body {
   height: 30rem;
   background: #2c2c54;
   border-radius: 2rem;
-  margin-top: 3rem;
   gap: 5rem;
 }
 .label_pi {
@@ -90,11 +106,26 @@ body {
   font-size: 2rem;
   font-weight: bold;
 }
+.label_won {
+  margin-top: 5rem;
+  font-size: 2.5rem;
+  color: #ffd900;
+  font-weight: bold;
+}
 #label_p {
   color: #ffd900bb;
 }
 #label_ia {
   color: rgba(255, 0, 0, 0.7);
+}
+#label_pWinner,
+#label_aWinner {
+  opacity: 0;
+}
+#label-rematch {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffffd8;
 }
 
 .container-moves {
@@ -139,6 +170,19 @@ body {
 
   to {
     position: relative;
-    top: 15rem;
+    top: 5rem;
+  }
+}
+
+/*Animation when the game begin*/
+@keyframes fadeWon {
+  from {
+    opacity: 0;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1.2);
   }
 }
