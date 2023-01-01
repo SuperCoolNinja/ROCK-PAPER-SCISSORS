@@ -32,8 +32,6 @@
     let movesFound = [];
 
     function onBeginPlay() {
-      player.style.width = "7rem";
-      ai.style.width = "7rem";
       wrapper_item.style.marginTop = "5rem";
       label_pWon.style.display = "none";
       label_aWon.style.display = "none";
