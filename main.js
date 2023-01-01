@@ -32,6 +32,12 @@
     let movesFound = [];
 
     function onBeginPlay() {
+      player.style.width = "7rem";
+      ai.style.width = "7rem";
+      wrapper_item.style.marginTop = "5rem";
+      label_pWon.style.display = "none";
+      label_aWon.style.display = "none";
+
       //Check what the player take as move :
       moves.forEach((elem) => {
         //Fill the array
@@ -70,9 +76,8 @@
 
     function gameUIReset() {
       movesFound = [];
-
-      label_pWon.textContent = "";
-      label_aWon.textContent = "";
+      label_pWon.style.display = "none";
+      label_aWon.style.display = "none";
       wrapper_item.style.animation = "slide 0.3s reverse ease-in-out";
       ai.src = `./assets/${default_move}.svg`;
       player.src = `./assets/${default_move}.svg`;
@@ -108,6 +113,8 @@
     };
 
     const showWinner = () => {
+      wrapper_item.style.marginTop = "0";
+
       const equality = player.name === ai.name;
       const won_by_paper =
         player.name === ENUM_MOVES.PAPER && ai.name === ENUM_MOVES.ROCK;
@@ -115,6 +122,12 @@
         player.name === ENUM_MOVES.ROCK && ai.name === ENUM_MOVES.SCISSORS;
       const won_by_scissors =
         player.name === ENUM_MOVES.SCISSORS && ai.name === ENUM_MOVES.PAPER;
+
+      label_pWon.textContent = "";
+      label_aWon.textContent = "";
+
+      label_pWon.style.display = "block";
+      label_aWon.style.display = "block";
 
       if (equality) {
         rematch_game.style.display = "block";
